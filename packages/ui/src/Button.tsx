@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const Button = () => {
+export const Button: React.FC<React.PropsWithChildren> = () => {
   return (
     <div className="rounded-md ">
       <a href="https://turbo.build/repo/docs">

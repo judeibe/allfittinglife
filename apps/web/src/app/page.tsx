@@ -1,7 +1,8 @@
 import { Metadata } from "next";
-import { Button, Card } from "ui";
+import { PropsWithChildren } from "react";
+import { Button, Card, CardProps } from "ui";
 
-const CARD_CONTENT = [
+const CARD_CONTENT: CardProps[] = [
   {
     title: "Caching Tasks",
     href: "https://turbo.build/repo/docs/core-concepts/caching",
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   title: "Web - Turborepo Example",
 };
 
-export default function Home() {
+const Home: React.FC<PropsWithChildren> = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <main className="mx-auto w-auto px-4 pt-16 pb-8 sm:pt-24 lg:px-8">
@@ -46,3 +47,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;

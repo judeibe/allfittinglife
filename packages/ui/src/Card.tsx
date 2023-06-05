@@ -1,13 +1,15 @@
-import * as React from "react";
+import { PropsWithChildren } from "react";
 
-export const Card = ({
-  title,
-  cta,
-  href,
-}: {
+export type CardProps = {
   title: string;
   cta: string;
   href: string;
+}
+
+export const Card: React.FC<CardProps & PropsWithChildren> = ({
+  title,
+  cta,
+  href,
 }) => {
   return (
     <a
